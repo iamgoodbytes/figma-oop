@@ -1,6 +1,8 @@
 <?php
     namespace Figma;
 
+    use Figma\Interfaces\iShape;
+
      abstract class Shape implements iShape {
         protected string $color;
         protected int $x;

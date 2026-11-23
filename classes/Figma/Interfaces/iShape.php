@@ -1,5 +1,5 @@
 <?php
-    namespace Figma;
+    namespace Figma\Interfaces;
 
     interface iShape {
         public function draw();
