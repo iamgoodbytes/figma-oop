@@ -19,6 +19,12 @@
         $triangle->setBase(100);
         $triangle->setHeight(80);
         $triangle->setScale(1.5);
+
+        $line = new \Figma\Line();
+        $line->setColor("black");
+        $line->setPosition(50, 400);
+        $line->setLength(200);
+        $line->setRotation(30);
     } catch (Error $e) {
        $error = $e->getMessage();
     }
@@ -38,6 +44,7 @@
         <?php $shape->draw(); ?>
         <?php $rectangle->draw(); ?>
         <?php $triangle->draw(); ?>
+        <?php $line->draw(); ?>
     <?php endif; ?>
 </body>
 </html>
