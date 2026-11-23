@@ -5,6 +5,13 @@
         $shape->setColor("red");
         $shape->setPosition(100, 20);
         $shape->setRadius(500);
+
+        $rectangle = new \Figma\Rectangle();
+        $rectangle->setColor("blue");
+        $rectangle->setPosition(200, 200);
+        $rectangle->setWidth(200);
+        $rectangle->setHeight(100);
+        $rectangle->setRotation(45);
     } catch (Error $e) {
        $error = $e->getMessage();
     }
@@ -22,6 +29,7 @@
         <p class="error">Error: <?= $error ?></p>
     <?php else: ?>
         <?php $shape->draw(); ?>
+        <?php $rectangle->draw(); ?>
     <?php endif; ?>
 </body>
 </html>
