@@ -12,6 +12,13 @@
         $rectangle->setWidth(200);
         $rectangle->setHeight(100);
         $rectangle->setRotation(45);
+
+        $triangle = new \Figma\Triangle();
+        $triangle->setColor("green");
+        $triangle->setPosition(300, 50);
+        $triangle->setBase(100);
+        $triangle->setHeight(80);
+        $triangle->setScale(1.5);
     } catch (Error $e) {
        $error = $e->getMessage();
     }
@@ -30,6 +37,7 @@
     <?php else: ?>
         <?php $shape->draw(); ?>
         <?php $rectangle->draw(); ?>
+        <?php $triangle->draw(); ?>
     <?php endif; ?>
 </body>
 </html>
